@@ -11,8 +11,9 @@ jobs:
     - id_rsa
   steps:
    - run:
-      name: Ping Raspberry Pi
+      name: Open connection to pi
       command: |
+       eval `ssh-agent -s`
        ssh-add ./id_rsa
        chmod 777 ./raspberrypi.expect
        ./raspberrypi.expect
