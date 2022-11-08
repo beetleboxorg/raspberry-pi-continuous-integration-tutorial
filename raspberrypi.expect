@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+spawn ssh -o "StrictHostKeyChecking=no" andrewswirski@10.22.109.188
+
+expect "~$ "
+send "echo Hello World from my Raspberry Pi \n"
+
+expect "~$ "
+send "exit \n"
+exit 0
