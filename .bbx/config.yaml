@@ -15,9 +15,7 @@ jobs:
       command: |
        eval `ssh-agent -s`
        chmod 600 ./id_rsa
-       mkdir ~/.ssh
-       mv ./id_rsa ~/.ssh
-       ssh-add
+       ssh-add ./id_rsa
        chmod 777 ./raspberrypi.expect
        ./raspberrypi.expect
       
