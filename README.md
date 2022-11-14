@@ -5,5 +5,5 @@ Ever put your Raspberry Pi inside a robot and wanted to be able to still develop
 We will be looking at how to get quickly started with setting up an automation server, how to communicate with a Raspberry Pi, how to successfully monitor them and update software.
 
 ## Contents
-[Introduction](https://beetlebox.org/how-to-setup-continuous-integration-on-raspberry-pis)
-[How to setup continuous integration on raspberry pis.](https://beetlebox.org/everything-you-need-to-know-about-devops-for-raspberry-pi/)
+-[Introduction](https://beetlebox.org/how-to-setup-continuous-integration-on-raspberry-pis)
+-[How to setup continuous integration on raspberry pis.](https://beetlebox.org/everything-you-need-to-know-about-devops-for-raspberry-pi/)
