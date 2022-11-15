@@ -2,7 +2,7 @@
 
 set timeout -1
 
-spawn ssh -o "StrictHostKeyChecking=no" <raspberry-pi-login>@<raspberry-pi-ip>
+spawn ssh -o "StrictHostKeyChecking=no" pi@10.22.109.154
 
 expect "~$ "
 send "echo Hello World from my Raspberry Pi \n"
