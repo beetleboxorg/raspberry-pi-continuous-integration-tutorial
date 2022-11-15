@@ -5,7 +5,7 @@ set timeout -1
 spawn ssh -o "StrictHostKeyChecking=no" pi@10.22.109.154
 
 expect "~$ "
-send "python Adafruit_BMP085_example.py"
+send "python Adafruit_BMP085_example.py \n"
 
 expect "~$ "
 send "exit \n"
