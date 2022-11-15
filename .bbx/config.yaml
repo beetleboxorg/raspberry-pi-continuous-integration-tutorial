@@ -22,6 +22,9 @@ jobs:
    - run:
       name: Run python on Raspberry Pi
       command: |
+       eval `ssh-agent -s`
+       chmod 600 ./id_rsa
+       ssh-add ./id_rsa
        chmod 777 ./raspberrypi.expect
        ./raspberrypi.expect
       
