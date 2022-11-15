@@ -11,11 +11,17 @@ jobs:
     - id_rsa
   steps:
    - run:
-      name: Open connection to pi
+      name: Download python files onto Raspberry Pi
       command: |
        eval `ssh-agent -s`
        chmod 600 ./id_rsa
        ssh-add ./id_rsa
+       scp ./Adafruit_BMP085.py pi@10.22.109.154:./
+       scp ./Adafruit_BMP085_example.py pi@10.22.109.154:./
+       scp ./Adafruit_I2C.py pi@10.22.109.154:./
+   - run:
+      name: Run python on Raspberry Pi
+      command: |
        chmod 777 ./raspberrypi.expect
        ./raspberrypi.expect
       
