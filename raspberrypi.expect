@@ -7,6 +7,13 @@ spawn ssh -o "StrictHostKeyChecking=no" pi@10.22.109.154
 expect "~$ "
 send "python Adafruit_BMP085_example.py \n"
 
-expect "~$ "
-send "exit \n"
-exit 0
+expect {
+    -re "~$" {
+        send "exit\n"
+        exit -1
+    }
+    -re "Altitude" {
+        send "exit\n"
+        exit 0
+    }
+}
