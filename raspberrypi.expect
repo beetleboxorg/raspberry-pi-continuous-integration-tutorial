@@ -8,7 +8,7 @@ expect "~$ "
 send "python Adafruit_BMP085_example.py \n"
 
 expect {
-    -re "~$" {
+    -re "Error" {
         send "exit\n"
         exit -1
     }
